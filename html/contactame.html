@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Mi web</title>
+        <link rel="icon" type="image/png" sizes="96x96" href="../imagenes/favicon-96x96.png">
+        <link rel="stylesheet" href="../css/estiloMiweb.css">
+    </head>
+    <body>
+        <div id="navegacion">
+            <ul>
+                <li><a href="../index.html">Tim Berners-lee</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="tabladeprecios.html">Tabla de precios</a></li>
+                <li><a href="contactame.html">Contactame</a></li>
+            </ul>
+            <img src="../imagenes/imagen-menu.png" usemap="#mapaNavegacion">
+            <map name="mapaNavegacion">
+                <area shape="rect" coords="16,44,108,132" href="../index.html">
+                <area shape="circle" coords="172,92,50" href="portfolio.html">
+                <area shape="poly" coords="232,135,288,42,344,135" href="tabladeprecios.html">
+                <area shape="rect" coords="352,32,440,140" href="contactame.html">
+            </map>
+        </div>
+        <div id="main">
+            <h3>Contactame</h3>
+            <h2>Formulario de Contacto</h2>
+            <form action="contactar.php" method="post">
+                <fieldset>
+                    <legend> Datos personales</legend>
+                    <label for="nombre">Nombre:</label><input type="text" name="nombre" placeholder="Introduce tu nombre..." required><u>*</u><br>
+                    <label for="apellidos">Apellidos:</label><input type="text" name="apellidos" placeholder="Introduce tus apellidos..." required><u>*</u><br>
+                    <label for="email">Email:</label><input type="email" name="email" required><br>
+                    <label for="fecha">Fecha de nacimiento:</label><input type="date" name="fecha" required><br>
+                    <label for="edad">Edad:</label><input type="number" name="edad" min="10" max="99" required><br>
+                    <label for="sexo">Sexo:</label><input type="radio" name="sexo" value="hombre" checked="Hombre">Hombre<input type="radio" name="sexo" value="mujer">Mujer<br>
+                    <label for="pais">País
+                        <select id="pais" name="pais">
+                            <option value="" selected="selected">-selecciona-</option>
+                            <option value="espana">España</option>
+                            <option value="portugal">Portugal</option>    
+                            <option value="francia">Francia</option>
+                            <option value="italia">Italia</option>
+                        </select>
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Otros Datos</legend>
+                    <label for="mensaje">Mensaje:</label><textarea id="mensaje" name="mensaje" placeholder="Introduce tu mensaje..." cols="60" rows="13"></textarea><br>
+                    <label for="adjunto">Adjunta una foto...</label><input type="file" name="adjunto" value="Examinar...">
+                </fieldset>
+                <label for="condiciones"></label><input type="checkbox" name="condiciones" required>He leído las condiciones...<br>
+                <label for="limpiar"></label><input type="reset" name="limpiar" value="Limpiar">
+                <label for="enviar"></label><input type="submit" name="enviar" value="Enviar">
+            </form>
+        </div>
+        <div id="mapa">
+            <h1>Centro de referencia</h1>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.7795771532205!2d-16.285456884573378!3d28.456060298796196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc41cceee5a8035f%3A0xab9f2a74d9e68b51!2sCIFP%20C%C3%A9sar%20Manrique!5e0!3m2!1ses!2ses!4v1636276778638!5m2!1ses!2ses" 
+            width="900" height="250">
+            </iframe>
+        </div>
+        <br>
+        <div id="pie">
+            © 2040 <a href="../index.html"> www.MiSitio.com</a>
+        </div>
+    </body>
+</html>
